@@ -1,10 +1,11 @@
 import React from 'react';
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {ImageBackground, ScrollView, StyleSheet, Text} from 'react-native';
 import Form from '../../../components/Form';
+import Footer from '../../../components/footer';
 
 const Hotels = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <ImageBackground
         source={{
           uri: 'https://storage.googleapis.com/sn-v4-local-core-media/1712007529194_hero.jpg',
@@ -14,7 +15,8 @@ const Hotels = () => {
         <Text style={styles.text}>Book Everything, Anywhere.®</Text>
         <Form />
       </ImageBackground>
-    </View>
+      <Footer />
+    </ScrollView>
   );
 };
 
@@ -32,11 +34,11 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: '#fff',
-    fontSize: 56,
+    fontSize: 52,
     lineHeight: 68,
     fontWeight: '700',
     textTransform: 'uppercase',
-    textShadow: '0 2px 10px rgba(0, 0, 0, .2)',
+    // textShadow: '0 2px 10px rgba(0, 0, 0, .2)',
   },
 });
 export default Hotels;

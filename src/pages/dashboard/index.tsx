@@ -2,11 +2,11 @@ import React from 'react';
 
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Hotels from './Hotels';
 import Flights from './Flights';
+import {View} from 'react-native';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -73,7 +73,11 @@ function Tabs() {
 }
 
 const Dashboard = () => {
-  return <Tabs />;
+  return (
+    <View>
+      <Tabs />
+    </View>
+  );
 };
 
 export default Dashboard;

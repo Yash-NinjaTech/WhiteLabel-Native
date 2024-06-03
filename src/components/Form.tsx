@@ -11,6 +11,7 @@ const Form = () => {
         mode="outlined"
         style={styles.input}
         left={<TextInput.Icon icon="map-marker" />}
+        outlineStyle={styles.outlineStyle}
       />
       <TextInput
         label="Dates"
@@ -18,6 +19,7 @@ const Form = () => {
         mode="outlined"
         style={styles.input}
         left={<TextInput.Icon icon="calendar" />}
+        outlineStyle={styles.outlineStyle}
       />
       <TextInput
         label="Guests"
@@ -25,13 +27,16 @@ const Form = () => {
         mode="outlined"
         style={styles.input}
         left={<TextInput.Icon icon="account" />}
+        outlineStyle={styles.outlineStyle}
       />
-      <Button
-        mode="contained"
-        onPress={() => console.log('Searching...')}
-        style={styles.button}>
-        SEARCH
-      </Button>
+      <View style={{justifyContent: 'center', width: '100%'}}>
+        <Button
+          mode="contained"
+          onPress={() => console.log('Searching...')}
+          style={styles.button}>
+          SEARCH
+        </Button>
+      </View>
     </View>
   );
 };
@@ -46,10 +51,19 @@ const styles = StyleSheet.create({
   },
   input: {
     marginBottom: 20,
+    borderRadius: 0,
+    borderColor: '#818698',
+    // borderWidth: 2,
   },
   button: {
+    width: '50%',
+    alignSelf: 'center',
     marginTop: 10,
-    backgroundColor: '#8A2BE2',
+    backgroundColor: '#7926ff',
+  },
+  outlineStyle: {
+    borderWidth: 2,
+    borderRadius: 30,
   },
 });
 export default Form;
