@@ -1,12 +1,21 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text, View} from 'react-native';
+import Dashboard from './src/pages/dashboard';
+import {SafeAreaView, StyleSheet} from 'react-native';
 
 const App = () => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{fontSize: 24}}>Welcome To WhiteLabel</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <NavigationContainer>
+        <Dashboard />
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 export default App;
